@@ -2,22 +2,16 @@
 	box-sizing: border-box;
 }
 
+/* Configure Small Layout */
 body {
-	background-color: #FCEBB6;
+	background-color: #D2B48C;
 	color: #221811;
-	margin:0;
 	font-family: Tahoma, Arial, sans-serif;
-
+	margin: 0;
 }
 
 #wrapper {
 	background-color: #231814;
-	margin-left: auto;
-	margin-right: auto;
-	width: 80%;
-	min-width: 900px;
-	max-width: 1280px;
-	box-shadow: 3px 3px 3px #676767;
 	padding: 0;
 }
 
@@ -26,9 +20,9 @@ header {
 	background-image: url(images/cup.jpg);
 	background-repeat: no-repeat;
 	color: #231814;
+	height: 128px;
 	padding-left: 105px;
 	padding-top: 5px;
-	height:128px;
 	padding-bottom: 5px;
 }
 
@@ -49,27 +43,20 @@ header a:hover {
 }
 
 h1 {
-	font-size: 3em;
-	font-family: 'Aboreto', sans-serif;
-	
+	font-size: 2em;
+	font-family: 'Bayon', sans-serif;
 }
 
 h2 {
 	color: #8C3826;
 }
 
-h3, dt {
+h3,
+dt {
 	color: #8C3826;
-	background-color: #D2B48C;
-	font-size: 1.2em;
-	padding-left: .5em;
-	padding-bottom: 0;
-	text-transform: uppercase;
-	border-bottom: 1px solid #221811;
-	clear: left;
 }
 
-h4, dt {
+h4 {
 	background-color: #D2B48C;
 	font-size: 1.2em;
 	padding-left: .5em;
@@ -80,13 +67,8 @@ h4, dt {
 }
 
 nav {
-	float: left;
-	font-weight: bold;
 	text-align: center;
 	font-size: 1.5em;
-	padding-top: 5px;
-	padding-bottom: 5px;
-	width: 200px;
 }
 
 nav a {
@@ -108,13 +90,14 @@ nav a:hover {
 nav ul {
 	display: flex;
 	flex-direction: column;
-	font-size:1.25;
+	font-size: 1.25em;
 	list-style-type: none;
 	margin: 0;
 	padding: 0;
 }
 
-nav li{ border-bottom:1px solid #FEF6C2;
+nav li {
+	border-bottom: 1px solid #FEF6C2;
 	padding: .5em 1em;
 	width: 100%;
 }
@@ -122,33 +105,28 @@ nav li{ border-bottom:1px solid #FEF6C2;
 main {
 	background-color: #FEF6C2;
 	display: block;
-
 	padding: 0 0 2em 0;
 }
 
-main h2, h3, h4, p, div, ul, dl {
-	padding-left: 3em;
-	padding-right: 2em;
+h2,
+h3,
+h4,
+p,
+div,
+ul,
+dl {
+	padding-left: 1em;
+	padding-right: 1em;
 }
 
-main ul{padding-left: 2em;
+main ul {
+	padding-left: 2em;
 }
 
 .details {
 	padding-left: 20%;
 	padding-right: 20%;
 	overflow: auto;
-}
-
-.floatleft {
-	float: left;
-	padding-right: 2em;
-	padding-bottom: 2em;
-}
-
-.onethird {
-	float: left;
-	width: 33%;
 }
 
 img {
@@ -159,97 +137,132 @@ img {
 
 #homehero {
 	height: 300px;
-	background-image: url(images/hero.jpg);
+	background-image: url(images/road.jpg);
 	background-repeat: no-repeat;
 	background-size: 100% 100%;
 }
 
 #heromugs {
 	height: 300px;
-	background-image: url(images/heromugs.jpg);
+	background-image: url(images/threemugs.jpg);
 	background-repeat: no-repeat;
 	background-size: 100% 100%;
 }
 
 #heroguitar {
 	height: 300px;
-	background-image: url(images/heroguitar.jpg);
+	background-image: url(images/guitar.jpg);
 	background-repeat: no-repeat;
 	background-size: 100% 100%;
 }
-#mobile{display: inline;
+
+#mobile {
+	display: inline;
 }
-#desktop{display: none;
+
+#desktop {
+	display: none;
 }
+
 footer {
 	background-color: #D2B48C;
 	font-size: .60em;
-		font-style: italic;
-		text-align: center;
+	font-style: italic;
+	text-align: center;
 	padding-bottom: 1em;
 	border-top: 2px solid #8C3826;
 }
 
-@media (min-width: 600px){
-	header{padding-left: 0;
-		text-align:center;
+/* Configure Medium Layout */
+@media (min-width: 600px) {
+	header {
+		padding-left: 0;
+		text-align: center;
 	}
-	h1{font-size:3em;
+
+	h1 {
+		font-size: 3em;
 	}
-	nav ul{flex-flow:row nowrap;
-	justify-content: space-around;
+
+	nav ul {
+		flex-flow: row nowrap;
+		justify-content: space-around;
 	}
-	nav li{border-bottom:none;
+
+	nav li {
+		border-bottom: none;
 	}
-	#heromugs{background-image: url(images/heromugs.jpg);}
-	#homehero{background-image: url(images/hero.jpg);}
-	#heroguitar{background-image: url(images/heroguitar.jpg);}
-	#flow{
-		display:flex;
-		flex-direction:row;}
+
+	#homehero {
+		background-image: url(images/hero.jpg);
+		height: 50vh;
+	}
+
+	#heromugs {
+		background-image: url(images/heromugs.jpg);
+	}
+
+	#heroguitar {
+		background-image: url(images/heroguitar.jpg);
+	}
+
+	#flow {
+		display: flex;
+		flex-direction: row;
+	}
+
 	#mobile {
-		display:none;
+		display: none;
 	}
-	#destop{display:inline;
+
+	#desktop {
+		display: inline;
 	}
-	.details{
-		display:flex;
-		flex-direction:row;
+
+	.details {
+		display: flex;
+		flex-direction: row;
 	}
-	h4{
+
+	h4 {
 		margin-left: 10%;
 		margin-right: 10%;
 	}
-
 }
 
-@media (min-width:1024px){
-	@supports (display: grid){
-		header{
-			grid-area:header;
+/* Configure Large Layout */
+@media (min-width: 1024px) {
+	@supports (display: grid) {
+		header {
+			grid-area: header;
 		}
+
 		nav {
 			grid-area: nav;
 		}
+
 		main {
 			grid-area: main;
 		}
-		footer{
+
+		footer {
 			grid-area: footer;
 		}
-		#wrapper{
-			display:grid;
+
+		#wrapper {
+			display: grid;
 			grid-template:
 				"header header"
-				"nav main"
+				"nav    main"
 				"footer footer"
-				/200px;
-
+				/ 200px;
 		}
-		nav ul{
+
+		nav ul {
 			flex-direction: column;
 		}
-		header{
+
+		header {
 			background-image: url(images/coffeelogo.jpg);
 		}
 	}
