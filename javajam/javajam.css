@@ -4,11 +4,8 @@
 
 body {
 	background-color: #FCEBB6;
-	background-image: url(images/fadedroad50.jpg);
-	background-repeat: no-repeat;
-	background-size: cover;
-	background-attachment: fixed;
 	color: #221811;
+	margin:0;
 	font-family: Tahoma, Arial, sans-serif;
 
 }
@@ -26,11 +23,12 @@ body {
 
 header {
 	background-color: #D2B48C;
-	background-image: url(images/coffeelogo.jpg);
+	background-image: url(images/cup.jpg);
 	background-repeat: no-repeat;
 	color: #231814;
-	padding-left: 240px;
+	padding-left: 105px;
 	padding-top: 5px;
+	height:128px;
 	padding-bottom: 5px;
 }
 
@@ -51,9 +49,9 @@ header a:hover {
 }
 
 h1 {
-	font-size: 2.5em;
+	font-size: 3em;
 	font-family: 'Aboreto', sans-serif;
-	line-height: 200%;
+	
 }
 
 h2 {
@@ -108,21 +106,32 @@ nav a:hover {
 }
 
 nav ul {
+	display: flex;
+	flex-direction: column;
+	font-size:1.25;
 	list-style-type: none;
-	padding-left: 0;
+	margin: 0;
+	padding: 0;
+}
+
+nav li{ border-bottom:1px solid #FEF6C2;
+	padding: .5em 1em;
+	width: 100%;
 }
 
 main {
 	background-color: #FEF6C2;
 	display: block;
-	margin-left: 200px;
-	overflow: auto;
+
 	padding: 0 0 2em 0;
 }
 
 main h2, h3, h4, p, div, ul, dl {
 	padding-left: 3em;
 	padding-right: 2em;
+}
+
+main ul{padding-left: 2em;
 }
 
 .details {
@@ -168,7 +177,10 @@ img {
 	background-repeat: no-repeat;
 	background-size: 100% 100%;
 }
-
+#mobile{display: inline;
+}
+#desktop{display: none;
+}
 footer {
 	background-color: #D2B48C;
 	font-size: .60em;
@@ -178,5 +190,67 @@ footer {
 	border-top: 2px solid #8C3826;
 }
 
+@media (min-width: 600px){
+	header{padding-left: 0;
+		text-align:center;
+	}
+	h1{font-size:3em;
+	}
+	nav ul{flex-flow:row nowrap;
+	justify-content: space-around;
+	}
+	nav li{border-bottom:none;
+	}
+	#heromugs{background-image: url(images/heromugs.jpg);}
+	#homehero{background-image: url(images/hero.jpg);}
+	#heroguitar{background-image: url(images/heroguitar.jpg);}
+	#flow{
+		display:flex;
+		flex-direction:row;}
+	#mobile {
+		display:none;
+	}
+	#destop{display:inline;
+	}
+	.details{
+		display:flex;
+		flex-direction:row;
+	}
+	h4{
+		margin-left: 10%;
+		margin-right: 10%;
+	}
 
+}
 
+@media (min-width:1024px){
+	@supports (display: grid){
+		header{
+			grid-area:header;
+		}
+		nav {
+			grid-area: nav;
+		}
+		main {
+			grid-area: main;
+		}
+		footer{
+			grid-area: footer;
+		}
+		#wrapper{
+			display:grid;
+			grid-template:
+				"header header"
+				"nav main"
+				"footer footer"
+				/200px;
+
+		}
+		nav ul{
+			flex-direction: column;
+		}
+		header{
+			background-image: url(images/coffeelogo.jpg);
+		}
+	}
+}
