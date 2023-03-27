@@ -1,149 +1,271 @@
-* {box-sizing: border-box;}
+@import url('https://fonts.googleapis.com/css2?family=Bayon&display=swap');
 
-body { background-color: #FCEBB6;
-      background-image: url(images/fadedroad50.jpg);
-      background-repeat: no-repeat;
-      background-size: cover;
-      background-attachment: fixed;
-      color: #221811;
-      font-family: Tahoma, serif;
+* {
+	box-sizing: border-box;
 }
 
-header { 
-      background-color:#D2B48C;
-      background-image: url(images/coffeelogo.jpg);
-      background-image: no-repeat;
-      color: #8C3826;
-       font-family: 'Aboreto', sans-serif;
-      text-align: center; 
-      padding-left:240px;
-      padding-top: 5px;
-      padding-bottom: 5px;
+/* Configure Small Layout */
+body {
+	background-color: #D2B48C;
+	color: #221811;
+	font-family: Tahoma, Arial, sans-serif;
+	margin: 0;
 }
 
-header a { text-decoration: none}
-
-header a:link { color: #231814;}
-
-header a:visited {color: #231814}
-
-header a:hover {color: #FEF6C2}
-
-h1 { line-height: 200%; }
-
-h2 { color:#8C3826;
-      font-family: 'Aboreto', sans-serif;
+#wrapper {
+	background-color: #231814;
+	padding: 0;
 }
+
+header {
+	background-color: #D2B48C;
+	background-image: url(images/yard.jpg);
+	background-repeat: no-repeat;
+	color: #231814;
+	height: 128px;
+	padding-left: 105px;
+	padding-top: 5px;
+	padding-bottom: 5px;
+}
+
+header a {
+	text-decoration: none;
+}
+
+header a:link {
+	color: #231814;
+}
+
+header a:visited {
+	color: #231814;
+}
+
+header a:hover {
+	color: #FEF6C2;
+}
+
+h1 {
+	font-size: 2em;
+	font-family: 'Bayon', sans-serif;
+}
+
+h2 {
+	color: #8C3826;
+}
+
 h3,
 dt {
 	color: #8C3826;
-      background-color: #D2B48C;
-      font-family: 'Aboreto', sans-serif;
-      font-size: 1.2em;
+}
+
+h4 {
+	background-color: #D2B48C;
+	font-size: 1.2em;
 	padding-left: .5em;
-	padding-bottom: .25em;
+	padding-bottom: 0;
+	text-transform: uppercase;
+	border-bottom: 1px solid #221811;
+	clear: left;
 }
 
-h4,
-dt{
-      color:#8C3826;
-      background-color: #D2B48C;
-      font-family: 'Aboreto', sans-serif;
-      font-size: 1.2em;
-	padding-left: .5em;
-	padding-bottom: .25em;
+nav {
+	text-align: center;
+	font-size: 1.5em;
 }
 
-nav { font-weight: bold;
-      text-align: center;
-      float: left;
-      font-size: 1.5em;
-      padding-top: 5px;
-      padding-bottom: 5px;
-      width: 200px; 
+nav a {
+	text-decoration: none;
 }
 
-nav a { text-decoration: none;}
+nav a:link {
+	color: #FEF6C2;
+}
 
-nav a:link{ color: #FEF6C2;}
+nav a:visited {
+	color: #D2B48C;
+}
 
-nav a:visited{color: #D2B48C}
+nav a:hover {
+	color: #CC9933;
+}
 
-nav a:hover{ color: #CC9933;}
+nav ul {
+	display: flex;
+	flex-direction: column;
+	font-size: 1.25em;
+	list-style-type: none;
+	margin: 0;
+	padding: 0;
+}
 
-nav ul {list-style-type: none;
-      padding-left:0; }
+nav li {
+	border-bottom: 1px solid #FEF6C2;
+	padding: .5em 1em;
+	width: 100%;
+}
 
 main {
-      background-color: #FEF6C2;
-      margin-left: 200px;
-      overflow: auto;
-      padding: 0 0 2em 0;
-      display: block;
+	background-color: #FEF6C2;
+	display: block;
+	padding: 0 0 2em 0;
 }
 
-main h2, h3, h4, p, div, ul, dl {
-      padding-left: 3em;
-      padding: right 2em;
+h2,
+h3,
+h4,
+p,
+div,
+ul,
+dl {
+	padding-left: 1em;
+	padding-right: 1em;
 }
 
-footer { background-color :#D2B48C;
-      font-size: .60em;
-         font-style: italic;
-		 text-align: center; 
-      padding-bottom: 1em;
-      border-top: 2px solid #8C3826;
-
-}
-#wrapper { 
-      width: 80%;
-      background-color: #fefaeb;
-      margin-left: auto;	  
-      margin-right:auto;
-      width: 80%;
-      min-width: 900px;
-      max-width: 1280px;
-      box-shadow: 3px 3px 3px #676767;
-      padding: 0;
-}
-#homehero {
-      height: 300px; 
-      background-image: url(images/hero.jpg);
-      background-repeat: no-repeat;
-      background-size: cover;
+main ul {
+	padding-left: 2em;
 }
 
-#heromugs{
-      height: 300px;
-      background-image: url(images/heromugs.jpg);
-      background-repeat: no-repeat;
-      background-size: 100% 100%;
-}
-
-#heroguitar{
-      height:300px;
-      background-image: url(images/heroguitar.jpg);
-      background-repeat: no-repeat;
-      background-size: 100% 100%;
-}
 .details {
 	padding-left: 20%;
 	padding-right: 20%;
-      overflow: auto;
+	overflow: auto;
 }
+
 img {
-      border-style:none;
-      max-width: 100%;
-      height: auto;
+	border-style: none;
+	max-width: 100%;
+	height: auto;
 }
 
-.floatleft {
-      float:left;
-      padding-right: 2em;
-      padding-bottom: 2em;
+#yard {
+	height: 300px;
+	background-image: url(images/yard.jpg);
+	background-repeat: no-repeat;
+	background-size: 100% 100%;
 }
 
-.onethird{
-      float: left;
-      width: 33%;
+#spencer {
+	height: 300px;
+	background-image: url(images/spencer.jpg);
+	background-repeat: no-repeat;
+	background-size: 100% 100%;
+}
+
+#kam {
+	height: 300px;
+	background-image: url(images/kam.jpg);
+	background-repeat: no-repeat;
+	background-size: 100% 100%;
+}
+
+#mobile {
+	display: inline;
+}
+
+#desktop {
+	display: none;
+}
+
+footer {
+	background-color: #D2B48C;
+	font-size: .60em;
+	font-style: italic;
+	text-align: center;
+	padding-bottom: 1em;
+	border-top: 2px solid #8C3826;
+}
+
+/* Configure Medium Layout */
+@media (min-width: 600px) {
+	header {
+		padding-left: 0;
+		text-align: center;
+	}
+
+	h1 {
+		font-size: 3em;
+	}
+
+	nav ul {
+		flex-flow: row nowrap;
+		justify-content: space-around;
+	}
+
+	nav li {
+		border-bottom: none;
+	}
+
+	#homehero {
+		background-image: url(images/hero.jpg);
+		height: 50vh;
+	}
+
+	#heromugs {
+		background-image: url(images/heromugs.jpg);
+	}
+
+	#heroguitar {
+		background-image: url(images/heroguitar.jpg);
+	}
+
+	#flow {
+		display: flex;
+		flex-direction: row;
+	}
+
+	#mobile {
+		display: none;
+	}
+
+	#desktop {
+		display: inline;
+	}
+
+	.details {
+		display: flex;
+		flex-direction: row;
+	}
+
+	h4 {
+		margin-left: 10%;
+		margin-right: 10%;
+	}
+}
+
+/* Configure Large Layout */
+@media (min-width: 1024px) {
+	@supports (display: grid) {
+		header {
+			grid-area: header;
+		}
+
+		nav {
+			grid-area: nav;
+		}
+
+		main {
+			grid-area: main;
+		}
+
+		footer {
+			grid-area: footer;
+		}
+
+		#wrapper {
+			display: grid;
+			grid-template:
+				"header header"
+				"nav    main"
+				"footer footer"
+				/ 200px;
+		}
+
+		nav ul {
+			flex-direction: column;
+		}
+
+		header {
+			background-image: url(images/coffeelogo.jpg);
+		}
+	}
 }
