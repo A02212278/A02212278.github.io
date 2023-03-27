@@ -181,9 +181,10 @@ footer {
 
 table {
 	margin:auto;
-	width: 90%
+	width: 90%;
 	border-spacing: 0;
 }
+
 th,
 td{
 	padding: 10px;
