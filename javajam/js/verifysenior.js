@@ -8,6 +8,5 @@ if (age >= 65) {
 } else {
     output = "Enjoy Music and Make Memories!"
 }
-
 document.getElementById("verify").innerHTML = output;
 
